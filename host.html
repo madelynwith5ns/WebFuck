@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!-- This is an example "host html file" that basically acts as a bootloader for WF code. -->
+<html>
+    <head>
+        <title>WebFuck Host</title>
+    </head>
+    <body>
+        <script src="libwebfuck.js"></script>
+        <script>
+            async function main(){
+                let wf = await loadWebFuck("webfuck.wf");
+                wf.call();
+            }
+            main();
+        </script>
+    </body>
+</html>
