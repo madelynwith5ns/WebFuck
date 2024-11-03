@@ -40,6 +40,13 @@ WebFuck:
 --[----->+<]>-----.+++++++++++.-------.+++++++++++++.++.+[--->+<]>+.------.[----->++<]>+.++.--.-[-->+++++<]>.+++++++.-[-->+++<]>-.$
 ```
 
+### Contributing
+Want features added to WebFuck?
+
+Open an issue with your request and we will flip a coin to determine whether or not to add it!
+
+Don't wanna deal with the almighty coinflip? Make a PR and if its not straight up malware it will probably get merged unless we don't feel like it!
+
 ### Licensing
 
 WebFuck is licensed under the Chaotic License. See `LICENSE.txt` for more details.
