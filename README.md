@@ -7,7 +7,7 @@ A brainfuck-derived language for the web.
 
 WebFuck is just like the BrainFuck you know and love, except, the `.` command,
 instead of outputting to stdout (since that doesn't exist) instead outputs to
-a buffer.
+a buffer. Additionally the `,` command doesn't exist.
 
 This buffer can be evaluated as JavaScript code with the `$` command, and
 cleared with `_`.
