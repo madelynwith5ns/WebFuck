@@ -28,7 +28,7 @@ losing any type-safety!
 ### Blazingly Fast
 
 WebFuck looks insane and low level as webfuck, that means its gotta be fast.
-Trust us, we didn't check.
+Trust us, ~~we didn't check.~~ [benchmarks](https://www.microsoft.com/en-au/download/details.aspx?id=9905)
 
 ### Syntax Example
 JS:
