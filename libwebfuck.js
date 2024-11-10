@@ -1,4 +1,4 @@
-const WEBFUCK_VERSION = "WebFuckV1";
+const WEBFUCK_VERSION = "WebFuckV2";
 
 // 512K of memory should be enough for anyone.
 const wfmem = new Uint8Array(524288);
@@ -47,6 +47,14 @@ class WebFuckModule {
                     if (wfmem[wfptr] != 0) {
                         i = loopstart;
                     }
+                    break;
+                case '0':
+                    wfptr = 0;
+                    loopstart = -1;
+                    break;
+                case '@':
+                    console.warn("Even though the @ command was added in this version of WebFuck (WebFuckV2), it is deprecated. Don't use it.");
+                    wfmem.fill(0, 0, 524288);
                     break;
                 case '$':
                     eval(wfoutbuf);
