@@ -1,16 +1,30 @@
 # WebFuck
-![image](https://github.com/user-attachments/assets/dee130b9-9951-4169-a348-0fc678b51fe6)
+![webfuckv3-banner](https://github.com/user-attachments/assets/e2115245-d421-47ac-8f60-84d1333b3763)
 
-A brainfuck-derived language for the web.
+A brainfuck-derived language for the web, V3.
 
 ### What's different?
 
-WebFuck is just like the BrainFuck you know and love, except, the `.` command,
-instead of outputting to stdout (since that doesn't exist) instead outputs to
-a buffer. Additionally the `,` command doesn't exist.
+In WebFuckV3, a bit! Here's the full table of features in WebFuckV3, along with when they were added.
 
-This buffer can be evaluated as JavaScript code with the `$` command, and
-cleared with `_`.
+| Command | Name | Description | Since |
+| --- | --- | --- | --- |
+| < | PTR Back | Move the pointer back by 1 cell | BrainFuck |
+| > | PTR Forward | Move the pointer forward by 1 cell | BrainFuck |
+| + | Increment | Increment the value of the cell on the pointer. | BrainFuck |
+| - | Decrement | Decrement the value of the cell on the pointer. | BrainFuck |
+| . | Output | Output the value of the cell on the pointer into the output buffer. | BrainFuck |
+| [ | Loop Open | Open a loop | BrainFuck |
+| ] | Loop Close | Close a loop | BrainFuck |
+| $ | Evaluate | Evaluate the output buffer as JavaScript code. | WebFuckV1 |
+| _ | Clear Output | Clear the output buffer. | WebFuckV1 |
+| 0 | Jump Zero | Set the pointer position to 0 | WebFuckV2 |
+| @ | Memory Clear (DEPRECATED!) | Clear the memory. | WebFuckV2, Deprecated in WebFuckV2 |
+| & | Reference | Push the current pointer on to the alternate pointer stack. | WebFuckV3 |
+| * | Dereference | Pop the last value off the alternate pointer stack, returning to it. | WebFuckV3 |
+| ? | Debug Dump | Print out the current internal state. | WebFuckV3* |
+
+\* The `?` operator is not required to be implemented by a WebFuck engine. `libwebfuck.js` implements it however.
 
 ### Type Safety
 
